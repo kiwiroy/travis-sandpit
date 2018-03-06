@@ -9,3 +9,14 @@ perl:
 
 script:
   - perl -V
+
+# See also https://github.com/travis-ci/perl-builder/blob/master/.travis.yml
+#before_install:
+#  - |
+#    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+#      curl -L https://install.perlbrew.pl | bash
+#      source ~/perl5/perlbrew/etc/bashrc
+#      perlbrew --quiet install-cpanm
+#      perlbrew --quiet install --noman -n -j 5 --as $TRAVIS_PER_VERSION $(perlbrew available | grep " perl-$TRAVIS_PERL_VERSION")
+#      perlbrew use $TRAVIS_PER_VERSION
+#    fi
