@@ -1,14 +1,19 @@
 language: perl
 
 perl:
-  - "5.8"
-  - "5.10"
-  - "5.14"
-  - "5.20"
   - "5.26"
 
 script:
   - perl -V
+
+os:
+  - linux
+  - osx
+
+osx_image: xcode7.3
+
+before_install:
+  - cat $HOME/.travis/job_stages
 
 # See also https://github.com/travis-ci/perl-builder/blob/master/.travis.yml
 #before_install:
